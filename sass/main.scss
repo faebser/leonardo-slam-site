@@ -1,0 +1,147 @@
+@import "normalize";
+
+html {
+  	box-sizing: border-box;
+  	/* Modern Georgia-based serif stack */
+	//font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+	font-family: 'Inconsolata', monospace;
+	font-size: 16px;
+	color: hsl(0, 0, 20);
+	//background-color: hsl(0, 0, 90ac);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	padding: 1rem;
+}
+
+main {
+	display: flex;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 700px;
+	flex-direction: column;
+}
+
+h2	{
+	padding-left: 2rem;
+	letter-spacing: 3px;
+	font-size: 2rem;
+	margin: 2rem 0 0 0;
+	span {
+		text-align: right;
+		font-style: italic;
+		padding-right: 2rem;
+		width: 60px;
+		display: inline-block;
+		letter-spacing: 2px;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+p,
+main > ul {
+	line-height: 1.4;
+	background-color: white;
+	padding: 1.5rem;
+	margin: 1rem 0;
+}
+
+/*p:first-letter {
+	font-size: 2rem;
+	padding: 0.5rem;
+	line-height: 1;
+	display: inline-block;
+}*/
+
+main > ul {
+	padding-left: 3.5rem;	
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 550px;
+	margin: 1rem auto 0 auto;
+	//border-right: 1px solid gray;
+	//border-top: 1px solid gray;
+	//padding-top: 2rem;
+	// padding-right : 2rem;
+	padding: 1.5rem;
+	background-color: white;
+}
+
+form ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+form ul li {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 1rem 0;
+}
+
+form ul li.last {
+	margin: 0;
+}
+
+form label,
+form input,
+form select {
+	padding: 0.2rem;
+}
+
+form input,
+form select {
+	border: none;
+	border-bottom: 1px solid hsl(0, 0, 64);
+	background-color: white;
+	padding-left: 0.5rem;
+}
+
+form select {
+	width: auto;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    -ms-appearance: none; 
+    appearance: none;
+    
+    &::-ms-expand {
+      display: none; /*IE10*/
+    }
+    
+    //border: none;
+    outline: none;
+    border-radius: 0; /*IOS*/
+
+}
+
+form input:focus,
+form select:focus {
+	background-color: hsl(0, 0, 95);
+}
+
+form label.optional {
+	color: hsl(0, 0, 50);
+}
+
+form input[type=submit] {
+	margin: 0.5rem 0 0 0;
+	border: 1px solid hsl(0, 0, 64);
+	padding: 0.5rem 0.95rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+form label {
+	border: 5px solid transparent;
+}
