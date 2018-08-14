@@ -2,12 +2,9 @@
 
 html {
   	box-sizing: border-box;
-  	/* Modern Georgia-based serif stack */
-	//font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 	font-family: 'Inconsolata', monospace;
 	font-size: 16px;
-	color: hsl(0, 0, 20);
-	//background-color: hsl(0, 0, 90ac);
+	color: #4c4b4f;
 }
 
 *, *:before, *:after {
@@ -15,7 +12,7 @@ html {
 }
 
 body {
-	padding: 1rem;
+	padding-bottom: 2rem;
 }
 
 main {
@@ -24,6 +21,10 @@ main {
 	width: 100%;
 	max-width: 700px;
 	flex-direction: column;
+}
+
+h1 {
+	margin-top: 0;
 }
 
 h2	{
@@ -41,6 +42,16 @@ h2	{
 	}
 }
 
+main > p {
+	padding: 0;
+	margin: 0;
+}
+
+form ~ p,
+form ~ h2 ~ p {
+	margin: 1rem;
+}
+
 img {
 	max-width: 100%;
 }
@@ -53,13 +64,6 @@ main > ul {
 	margin: 1rem 0;
 }
 
-/*p:first-letter {
-	font-size: 2rem;
-	padding: 0.5rem;
-	line-height: 1;
-	display: inline-block;
-}*/
-
 main > ul {
 	padding-left: 3.5rem;	
 }
@@ -69,11 +73,7 @@ form {
 	flex-direction: column;
 	width: 100%;
 	max-width: 550px;
-	margin: 1rem auto 0 auto;
-	//border-right: 1px solid gray;
-	//border-top: 1px solid gray;
-	//padding-top: 2rem;
-	// padding-right : 2rem;
+	margin: 3.75rem auto;
 	padding: 1.5rem;
 	background-color: white;
 }
@@ -135,7 +135,7 @@ form label.optional {
 }
 
 form input[type=submit] {
-	margin: 0.5rem 0 0 0;
+	margin: 1rem 0 0 auto;
 	border: 1px solid hsl(0, 0, 64);
 	padding: 0.5rem 0.95rem;
 	font-weight: bold;
@@ -144,4 +144,10 @@ form input[type=submit] {
 
 form label {
 	border: 5px solid transparent;
+}
+
+@media screen and (max-width: 700px) {
+	main {
+		padding: 0 1rem;
+	}
 }
