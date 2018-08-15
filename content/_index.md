@@ -62,14 +62,9 @@ It is based on the format of a poetry slam - in which performances are judged by
 * Best Soundtrack
 * Loudest
 
-Sign up is encouraged in order to reserve a spot.
-
-Microphone, audio & video playback equipment will be provided.
-
-Free Pizza & Beer
-
+Sign up is encouraged in order to reserve a spot. <br>
+Microphone, audio & video playback equipment will be provided. <br>
+Free Pizza & Beer <br>
 Address further questions to <a href="mailto:the.leonardo.slam@gmail.com">the.leonardo.slam@gmail.com</a>
 
-<a href="https://www.leonardo.info/mission">About Leonardo</a></p>
-
-
+<a href="https://www.leonardo.info/mission">About Leonardo</a>
