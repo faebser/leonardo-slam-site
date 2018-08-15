@@ -8,7 +8,7 @@ description = ""
 
 <img src="LeonardoSlam_Web_.png">
 
-<form action="https://formspree.io/faebser@gmail.com"
+<form action="https://formspree.io/the.leonardo.slam@gmail.com"
       method="POST">
       <ul>
           <li>
@@ -39,7 +39,26 @@ description = ""
 
 # Info
 
-Aut et aliquid hic et consectetur. Iure vitae atque qui. Fugiat aut sit est nihil doloribus. Nihil vel odit sed omnis quia ut et. Libero aut et et voluptas ut aut blanditiis laudantium. Iusto quidem architecto quia odit corporis.
+<p>The Leonardo Slam is an event for cross contamination of ideas, a short open public event in which an individual or group may present ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, about about about, etc.  </p>
+<p>It is based on the format of a poetry slam - in which performances are judged by a panel of judges and awarded prizes according to a set of criteria perhaps including, but not limited to:</p>
 
-Doloremque deserunt est perferendis commodi quis. Sed odio nihil odio recusandae nobis. Voluptas necessitatibus fugiat nisi corporis enim. Nihil numquam molestias odit occaecati veniam. Vero nobis sed aut voluptate sapiente beatae quis. Autem culpa ullam animi optio praesentium cum deleniti.
-
+<p>Originality
+<br>Creativity
+<br>Presentation Style
+<br>Disorder
+<br>Compliance to IEEE 1872-2015
+<br>Public Involvement
+<br>Sense of Humor
+<br>How Appropriately the Wine Pairs With the Cheese
+<br>Balance
+<br>Most Jargon
+<br>Best Parody of Famous French Philosophers
+<br>Most Inappropriate Combination of Topics
+<br>Audience Prize
+<br>The Sleeper Award
+<br>Most Creative use of PowerPoint
+<br>Best Soundtrack
+<br>Loudest</p>
+<p>Sign up is encouraged in order to reserve a spot. </p><p> Microphone, audio & video playback equipment will be provided.</p>
+<p>Address further questions to <a href="mailto:the.leonardo.slam@gmail.com">the.leonardo.slam@gmail.com</a></p>
+<p><a href="https://www.leonardo.info/mission">About Leonardo</a></p>
