@@ -41,11 +41,11 @@ description = ""
 
 <p>The Leonardo Slam is an event for cross contamination of ideas, a short open public event in which an individual or group may present ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, about about about, etc.  </p>
 <p>It is based on the format of a poetry slam - in which performances are judged by a panel of judges and awarded prizes according to a set of criteria perhaps including, but not limited to:</p>
-
 <p>Originality
 <br>Creativity
 <br>Presentation Style
-<br>Disorder
+<br>Orderliness
+<br>Disorderliness
 <br>Compliance to IEEE 1872-2015
 <br>Public Involvement
 <br>Sense of Humor
@@ -60,5 +60,9 @@ description = ""
 <br>Best Soundtrack
 <br>Loudest</p>
 <p>Sign up is encouraged in order to reserve a spot. </p><p> Microphone, audio & video playback equipment will be provided.</p>
+<p>Free Pizza & Beer</p>
+
 <p>Address further questions to <a href="mailto:the.leonardo.slam@gmail.com">the.leonardo.slam@gmail.com</a></p>
 <p><a href="https://www.leonardo.info/mission">About Leonardo</a></p>
+
+
