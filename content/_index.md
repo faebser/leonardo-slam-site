@@ -8,7 +8,7 @@ description = ""
 
 <img src="LeonardoSlam_Web_.png">
 
-<form action="https://formspree.io/the.leonardo.slam@gmail.com"
+<form action="https://formspree.io/the.leonardo.slam+signup@gmail.com"
       method="POST">
       <ul>
           <li>
