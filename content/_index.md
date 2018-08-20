@@ -39,13 +39,19 @@ description = ""
 
 # Info
 
-The Leonardo Slam is an event for cross contamination of ideas, a short open public event in which an individual or group may present ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, et cetera.
+The Leonardo Slam is an event for cross contamination of ideas, a short open public based on the format of poetry slam, but more free form: an individual or group may present ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, et cetera.
 
-Give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a duration between 0 seconds and 8 minutes.
+Present or demonstrate an artwork, give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a non negative duration and not being too long.
+
+COMING SOON: Assorted materials from the Leonardo Archive will be posted here for reference and inspiration.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
 
 Presentations may be given in any language.
 
-It is based on the format of a poetry slam - in which performances are judged by a panel of judges and awarded prizes according to a set of criteria perhaps including, but not limited to:
+Sign up is encouraged in order to reserve a spot.
+
+Microphone, audio & video playback equipment will be provided.
+
+Prizes will be awarded according to a set of criteria perhaps including, but not limited to:
 
 * Originality
 * Creativity
@@ -65,13 +71,11 @@ It is based on the format of a poetry slam - in which performances are judged by
 * Best Soundtrack
 * Loudest
 
-Sign up is encouraged in order to reserve a spot.
-
-Microphone, audio & video playback equipment will be provided.
-
 Free Pizza & Beer. 
 
 Address further questions to <a href="mailto:the.leonardo.slam@gmail.com">the.leonardo.slam@gmail.com</a>.
+
+Sponsored by <a href="https://www.ufg.at/Master-Programme.1594+M52087573ab0.0.html">Interface Cultures/Kuntuniversität Linz.</a>
 
 Leonardo was founded in 1968, the year that the self-refereed sport Ultimate Frisbee was invented.
 
