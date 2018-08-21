@@ -1,0 +1,38 @@
+@import "normalize";
+
+html {
+  	box-sizing: border-box;
+	font-family: 'Inconsolata', monospace;
+	font-size: 16px;
+	color: #4c4b4f;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	padding-bottom: 2rem;
+}
+
+main {
+	width: 100%;
+}
+
+#gallery {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   2px;
+  -moz-column-count:    5;
+  -moz-column-gap:      2px;
+  column-count:         5;
+  column-gap:           2px;  
+}
+
+@media screen and (max-width: 700px) {
+	main {
+		padding: 0 1rem;
+	}
+}
