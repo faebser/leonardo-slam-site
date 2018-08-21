@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="gallery.css" />
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<title>◼ {{page.title}}</title>
+	{% endblock head %}
+</head>
+<body id="gallery-page">
+	<main>
+
+		<h1>Archive</h1>
+		<hr>
+
+		{{ page.content | safe }}
+
+		<section id="gallery">
+		{% for asset in page.assets %}
+			{% if asset is ending_with(".jpg") %}
+				<a href="{{ get_url(path=asset) }}">
+				  <img src="{{ resize_image(path=asset, width=240, op="fit_width") }}" />
+				</a>
+				&ensp;
+			{% endif %}
+		{% endfor %}
+		</section>
+	</main>
+    <footer>
+    	
+    </footer>
+</body>
+</html>
