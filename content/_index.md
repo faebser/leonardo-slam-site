@@ -39,7 +39,7 @@ description = ""
 
 # Info
 
-The Leonardo Slam is an event for cross contamination of ideas, a short open public based on the format of poetry slam, but more free form: an individual or group may present ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, et cetera.
+The Leonardo Slam is an event for cross contamination of ideas, a short open public gathering based on the format of poetry slam, but more free-form: an individual or group may present work, words, stories, video, sound, ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, et cetera.
 
 Present or demonstrate an artwork, give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a non negative duration and not being too long.
 
@@ -77,6 +77,6 @@ Address further questions to <a href="mailto:the.leonardo.slam@gmail.com">the.le
 
 Sponsored by <a href="https://www.ufg.at/Master-Programme.1594+M52087573ab0.0.html">Interface Cultures/Kuntuniversität Linz.</a>
 
-Leonardo was founded in 1968, the year that the self-refereed sport Ultimate Frisbee was invented.
+Leonardo was founded in 1968.
 
 <a href="https://www.leonardo.info/mission">About Leonardo</a>
