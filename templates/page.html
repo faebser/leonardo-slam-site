@@ -28,7 +28,7 @@
 		{% for asset in page.assets %}
 			{% if asset is ending_with(".jpg") %}
 				<a href="{{ get_url(path=asset) }}">
-				  <img src="{{ resize_image(path=asset, width=240, op="fit_width") }}" />
+				  <img src="{{ resize_image(path=asset, width=360, op="fit_width") }}" />
 				</a>
 				&ensp;
 			{% endif %}
