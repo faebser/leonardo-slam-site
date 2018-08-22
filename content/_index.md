@@ -43,7 +43,7 @@ The Leonardo Slam is an event for cross contamination of ideas, a short open pub
 
 Present or demonstrate an artwork, give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a non negative duration and not being too long.
 
-COMING SOON: Assorted materials from the Leonardo Archive will be posted here for reference and inspiration.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
+<a href="/archive">Leonardo Archive Material</a>: Assorted materials from the Leonardo Archive are here for reference and inspiration.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
 
 Presentations may be given in any language.
 
