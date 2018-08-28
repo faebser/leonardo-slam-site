@@ -9,14 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
 		return document.querySelectorAll("img.hidden:not(.first)");
 	}
 
-	function setWAndH (first, targets) {
+	function setWAndH () {
+		var first = document.querySelector("img.first");
 		var h = first.height;
 		var w = first.width;
 
+		var targets = document.querySelectorAll("img:not(.first)");
 		
-		for (var i = the_rest.length - 1; i >= 0; i--) {
-			the_rest[i].setAttribute("height", h);
-			the_rest[i].setAttribute("width", w);
+		for (var i = targets.length - 1; i >= 0; i--) {
+			targets[i].setAttribute("height", h);
+			targets[i].setAttribute("width", w);
 		}
 	}
 
@@ -43,12 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	imagesLoaded(first, function () {
-		setWAndH(first, the_rest);
+		setWAndH();
 
 		// wait for next draw
 		window.requestAnimationFrame(function () {
 			unhideAndUpdateRest(the_rest);
 			window.addEventListener("scroll", _.throttle(_.partial(unhideAndUpdateRest, the_rest), 250), {passive: true});
+			window.addEventListener("resize", _.debounce(setWAndH, 250, {trailing: true, leading: true}), {passive: true});
 		});
 
 	});
