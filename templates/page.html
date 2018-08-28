@@ -11,10 +11,11 @@
 	<link rel="apple-touch-icon" href="icon.png">
 	<!-- Place favicon.ico in the root directory -->
 
-	<link rel="stylesheet" href="gallery.css" />
+	<link rel="stylesheet" href="/gallery.css" />
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<title>◼ {{page.title}}</title>
     <script>
+    	// i dont think we need this anymore
     document.addEventListener("DOMContentLoaded", function () {
         var imgs =document.querySelectorAll("a");
         for(var i =0; i < imgs.length -1; i++){
@@ -39,16 +40,26 @@
 		<section id="gallery">
 		{% for asset in page.assets %}
 			{% if asset is ending_with(".jpg") %}
-				<a href="{{ get_url(path=asset) }}">
-				  <img src="{{ resize_image(path=asset, width=360, op="fit_width") }}" />
+				{% if loop.index <= 1 %}
+				<a href="{{ get_url(path=asset, trailing_slash=false) }}">
+				  <img class="first" width="360" src="{{ resize_image(path=asset, width=360, op="fit_width") }}" />
 				</a>
 				&ensp;
+				{% endif %}
+				{% if loop.index > 1 %}
+					<a  href="{{ get_url(path=asset, trailing_slash=false) }}">
+				 		<img class="hidden" width="360" data-src="{{ resize_image(path=asset, width=360, op="fit_width") }}" />
+					</a>
+					&ensp;
+				{% endif %}
 			{% endif %}
 		{% endfor %}
 		</section>
 	</main>
     <footer>
-    	
+    	<script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script>
+    	<script type="text/javascript" src="/js/lodash.custom.js"></script>
+    	<script type="text/javascript" src="/js/gallery.js"></script>
     </footer>
 </body>
 </html>
