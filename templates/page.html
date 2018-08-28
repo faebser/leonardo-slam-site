@@ -14,26 +14,12 @@
 	<link rel="stylesheet" href="{{ get_url(path="/gallery.css", trailing_slash=false) }}" />
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<title>◼ {{page.title}}</title>
-    <script>
-    	// i dont think we need this anymore
-    document.addEventListener("DOMContentLoaded", function () {
-        var imgs =document.querySelectorAll("a");
-        for(var i =0; i < imgs.length -1; i++){
-            var strLen = imgs[i].href.length;
-            var lastChar = imgs[i].href.slice(strLen-1, strLen);
-            if (lastChar === "/"){ 
-                imgs[i].setAttribute("href", imgs[i].href.substring(0, strLen-1));
-            }
-        }
-    });
-    </script>
 	{% endblock head %}
 </head>
 <body id="gallery-page">
 	<main>
 
 		<h1>Archive</h1>
-		<hr>
 
 		{{ page.content | safe }}
 

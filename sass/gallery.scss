@@ -19,6 +19,13 @@ main {
 	width: 100%;
 }
 
+h1 {
+	//padding-left: 1em;
+	letter-spacing: 3px;
+	font-weight: normal;
+	padding-left: 1em;
+}
+
 #gallery {
   /* Prevent vertical gaps */
   line-height: 0;
@@ -52,7 +59,20 @@ main {
 }
 
 @media screen and (max-width: 700px) {
+	#gallery {
+		column-count: 2;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#gallery {
+		column-count: 1;
+	}
+}
+
+@media screen and (min-width: 1080px) {
 	main {
-		padding: 0 1rem;
+		max-width: 1080px;
+		margin: 0 auto;
 	}
 }
