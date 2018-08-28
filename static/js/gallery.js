@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		return document.querySelectorAll("img.hidden:not(.first)");
 	}
 
-	imagesLoaded(first, function () {
+	function setWAndH (first, targets) {
 		var h = first.height;
 		var w = first.width;
 
@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			the_rest[i].setAttribute("height", h);
 			the_rest[i].setAttribute("width", w);
 		}
+	}
 
-		// wait for next draw
-		window.requestAnimationFrame(function () {
-			scrollTop = window.scrollY + window.innerHeight;
+	function unhideAndUpdateRest (the_rest) {
+		var scrollTop = window.scrollY + window.innerHeight;
 
 			for (var i = 0; i <= the_rest.length - 1; i++) {
 				if(the_rest[i].offsetTop < scrollTop) {
@@ -39,7 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
 					e.setAttribute("src", e.dataset.src);
 				}
 			}
-			the_rest = updateRest(document);
+
+	}
+
+	imagesLoaded(first, function () {
+		setWAndH(first, the_rest);
+
+		// wait for next draw
+		window.requestAnimationFrame(function () {
+			unhideAndUpdateRest(the_rest);
+			window.addEventListener("scroll", _.throttle(_.partial(unhideAndUpdateRest, the_rest), 250), {passive: true});
 		});
+
 	});
 });
