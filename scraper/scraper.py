@@ -4,23 +4,39 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
+import json
 
 q = Queue()
 targetQueue = Queue()
-WORKERS = 4
+WORKERS = 10
 MIN_WAIT = 1
-MAX_WAIT = 1
+MAX_WAIT = 3
 ROOT_URL = "http://arteca.mit.edu"
 
 
-def map_link_to_abstracts(_link):
+def sleepy_request(_link):
     # waiting
     sleepy = random.randint(MIN_WAIT, MAX_WAIT)
     time.sleep(sleepy)
     print("waited " + str(sleepy) + " seconds")
     request = requests.get(_link)
-    html = BeautifulSoup(request.text, features="html.parser")
-    return html.select(".view-content p")
+    return BeautifulSoup(request.text, features="html.parser")
+
+
+def map_link_to_abstracts(_link):
+    if not _link.startswith("http"):
+        _link = ROOT_URL + _link
+    html = sleepy_request(_link)
+    # return None if no abstract found
+    try:
+        abstract_titles = html.select(".body.field div.field-label")
+        abstract = None
+        for title in abstract_titles:
+            if "Abstract" in title.string or "abstract" in title.string:
+                abstract = title.next_sibling.string
+        return abstract
+    except:
+        return None
 
 
 def worker(_q, _tq, _i):
@@ -32,13 +48,8 @@ def worker(_q, _tq, _i):
         if item is None:
             break
         print("got " + item)
-
         # waiting
-        sleepy = random.randint(MIN_WAIT, MAX_WAIT)
-        time.sleep(sleepy)
-        print("waited " + str(sleepy) + " seconds")
-        request = requests.get(item)
-        html = BeautifulSoup(request.text, features="html.parser")
+        html = sleepy_request(item)
         print("getting abstracts")
         abstract_links = [_link["href"] for _link in html.select("a.journal-abstract-link")]
         abstract_texts = map(map_link_to_abstracts, abstract_links)
@@ -75,6 +86,10 @@ for t in threads:
 
 # turn tq into list
 result = list(targetQueue.queue)
-print(result)
+print(len(result))
+with open('raw.json', 'w') as raw_file:
+    json.dump(result, raw_file)
+
+
 
 

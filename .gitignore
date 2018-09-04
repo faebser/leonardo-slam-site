@@ -2,3 +2,4 @@ public/
 static/_processed_images/
 .idea/
 scraper/env/
+node_modules/

@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <title>◼ fun generator</title>
+  <script type="text/javascript">
+    window.dataUrl = "{{ get_url(path="/js/data.json", trailing_slash=false) | safe }}";
+  </script>
+  {% endblock head %}
+</head>
+<body>
+  <main>
+    <div id="app" class="open">
+      <p id="buzzword">Loading JSON</p>
+      <div id="controls">
+        <button id="next" class="disabled">next</button>
+      </div>
+    </div>
+  </main>
+    <footer>
+      <script type="text/javascript" src="{{ get_url(path="/js/es5_words.js", trailing_slash=false) }}"></script>
+    </footer>
+</body>
+</html>

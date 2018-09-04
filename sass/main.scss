@@ -159,16 +159,9 @@ form label {
 	border: 5px solid transparent;
 }
 
-#gallery {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;  
+#generator {
+	float: right;
+	height: 300px;
 }
 
 @media screen and (max-width: 700px) {
