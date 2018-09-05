@@ -11,6 +11,15 @@ var buzzing = function buzzing(words) {
   });
 };
 
+var buzzing_title = function buzzing_title(words) {
+  // change the two values in randomInt to set min and max length of title
+  return getWord(words, BEGINNING, randomInt(2, 4), []).reverse().reduce(function (acc, el) {
+    if (el === "-E-") return acc;
+    if (el == "," || el == ".") return acc + el;
+    return acc + " " + el;
+  });
+};
+
 var getWord = function getWord(words, word, count, targetList) {
   var nextWords = words[word];
 
@@ -48,25 +57,31 @@ var randomInt = function randomInt(min, max) {
 };
 
 var app = function app() {
-  // elements
-  var buzzwords = document.getElementById('buzzword'); //const like = document.getElementById('like');
+  "use strict"; // elements
+
+  var buzzwords = document.getElementById('buzzword');
+  var title = document.getElementById('buzztitle'); //const like = document.getElementById('like');
 
   var next = document.getElementById('next'); //console.log(like);
+  //console.log(next);
 
-  console.log(next);
-  fetch(window.dataUrl).then(function (response) {
-    response.text().then(function (text) {
-      var words = JSON.parse(text);
-      var bound_buzz = buzzing.bind(null, words);
+  Promise.all([fetch(window.dataUrl).then(function (response) {
+    return response.text();
+  }), fetch(window.titleUrl).then(function (response) {
+    return response.text();
+  })]).then(function (things) {
+    var bound_words = buzzing.bind(null, JSON.parse(things[0]));
+    var t = JSON.parse(things[1]);
+    var bound_titles = buzzing_title.bind(null, t);
 
-      var exchange = function exchange(_bound_buzz, _buzzwords) {
-        _buzzwords.textContent = bound_buzz();
-      };
+    var exchange = function exchange(_bound_buzz, _bound_titles, _buzzwords, _buzztitle) {
+      _buzzwords.textContent = _bound_buzz();
+      _buzztitle.textContent = _bound_titles();
+    };
 
-      buzzwords.textContent = bound_buzz(); // do all the init here
-
-      next.addEventListener('click', exchange.bind(null, bound_buzz, buzzwords));
-    });
+    buzzwords.textContent = bound_words();
+    buzztitle.textContent = bound_titles();
+    next.addEventListener('click', exchange.bind(null, bound_words, bound_titles, buzzwords, buzztitle));
   });
 };
 

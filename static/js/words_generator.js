@@ -11,6 +11,17 @@ const buzzing = (words) => {
 			});
 }
 
+const buzzing_title = (words) => {
+    // change the two values in randomInt to set min and max length of title
+    return getWord(words, BEGINNING, randomInt(2, 4), [])
+            .reverse()
+            .reduce((acc, el) => {
+                if(el === "-E-") return acc;
+                if(el == "," || el == ".") return acc + el;
+                return acc + " " + el;
+            });
+}
+
 const getWord = (words, word, count, targetList) => {
 	
 	const nextWords = words[word];
@@ -46,29 +57,36 @@ const randomInt = (min, max) => {
 }
 
 const app = () => {
+    "use strict";
 
 	// elements
 	const buzzwords = document.getElementById('buzzword');
+    const title = document.getElementById('buzztitle');
 	//const like = document.getElementById('like');
 	const next = document.getElementById('next');
 
 	//console.log(like);
-	console.log(next);
-    
-    fetch(window.dataUrl)
-    	.then((response) => {
-    		response.text()
-    			.then((text) => {
-    				const words = JSON.parse(text);
-    				const bound_buzz = buzzing.bind(null, words);
-    				const exchange = (_bound_buzz, _buzzwords) => {
-    					_buzzwords.textContent = bound_buzz();
-    				};
-    				buzzwords.textContent = bound_buzz();
-    				// do all the init here
-    				next.addEventListener('click', exchange.bind(null, bound_buzz, buzzwords));
-    			});
-	    });
+	//console.log(next);
+
+    Promise.all([
+        fetch(window.dataUrl).then((response) => {return response.text()}),
+        fetch(window.titleUrl).then((response) => {return response.text()})
+    ])
+    .then((things) => {
+        const bound_words = buzzing.bind(null, JSON.parse(things[0]));
+        const t = JSON.parse(things[1]);
+        const bound_titles = buzzing_title.bind(null, t);
+
+        const exchange = (_bound_buzz, _bound_titles, _buzzwords, _buzztitle) => {
+            _buzzwords.textContent = _bound_buzz();
+            _buzztitle.textContent = _bound_titles();
+        };
+
+        buzzwords.textContent = bound_words();
+        buzztitle.textContent = bound_titles();
+
+        next.addEventListener('click', exchange.bind(null, bound_words, bound_titles, buzzwords, buzztitle));
+    });
 };
 
 document.addEventListener("DOMContentLoaded", app);

@@ -20,13 +20,14 @@
   <title>◼ fun generator</title>
   <script type="text/javascript">
     window.dataUrl = "{{ get_url(path="/js/data.json", trailing_slash=false) | safe }}";
+    window.titleUrl = "{{ get_url(path="/js/data-titles.json", trailing_slash=false) | safe }}";
   </script>
   {% endblock head %}
 </head>
 <body>
   <main>
     <div id="app" class="open">
-      <h1>Generator</h1>
+      <h1 id="buzztitle">Generator</h1>
       <p id="buzzword">Loading JSON</p>
       <div id="controls">
         <button id="next" class="disabled">Moar</button>
