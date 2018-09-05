@@ -4,7 +4,7 @@ var BEGINNING = "-B-";
 var END = "-E-";
 
 var buzzing = function buzzing(words) {
-  return getWord(words, BEGINNING, randomInt(10, 15), []).reverse().reduce(function (acc, el) {
+  return getWord(words, BEGINNING, randomInt(15, 75), []).reverse().reduce(function (acc, el) {
     if (el === "-E-") return acc;
     if (el == "," || el == ".") return acc + el;
     return acc + " " + el;

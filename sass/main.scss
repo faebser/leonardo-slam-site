@@ -159,12 +159,19 @@ form label {
 	border: 5px solid transparent;
 }
 
-#generator {
-	float: right;
-	height: 300px;
+@media screen and (max-width: 700px) {
+	html {
+		font-size: 14px;
+	}
+	main {
+		padding: 0 1rem;
+	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
+	html {
+		font-size: 13px;
+	}
 	main {
 		padding: 0 1rem;
 	}

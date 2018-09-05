@@ -14,9 +14,6 @@
 	<link rel="stylesheet" href="main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<title>◼ {{section.title}}</title>
-	<script type="text/javascript">
-    	window.dataUrl = "{{ get_url(path="/js/data.json", trailing_slash=false) | safe }}";
-  	</script>
 	{% endblock head %}
 </head>
 <body>
@@ -24,7 +21,6 @@
 		{{ section.content | safe }}
 	</main>
     <footer>
-    	<!-- <script type="text/javascript" src="{{ get_url(path="/js/es5_words.js", trailing_slash=false) }}"></script> -->
     </footer>
 </body>
 </html>

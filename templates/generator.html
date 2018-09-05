@@ -14,6 +14,8 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="generator.css" />
+
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <title>◼ fun generator</title>
   <script type="text/javascript">
@@ -24,10 +26,14 @@
 <body>
   <main>
     <div id="app" class="open">
+      <h1>Generator</h1>
       <p id="buzzword">Loading JSON</p>
       <div id="controls">
-        <button id="next" class="disabled">next</button>
+        <button id="next" class="disabled">Moar</button>
       </div>
+    </div>
+    <div id="info">
+      {{ page.content | safe }}
     </div>
   </main>
     <footer>

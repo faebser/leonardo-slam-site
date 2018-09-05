@@ -42,9 +42,7 @@ description = ""
 
 # Info
 
-
 <p>The Leonardo Slam is an event for cross contamination of ideas, a short open public gathering based on the format of poetry slam, but more free-form: an individual or group may present work, words, stories, video, sound, ideas about work, work about ideas, work about work, ideas about ideas, work about nothing, ideas about music, music about performances, apples about oranges, oranges about history, history about histories, dance about architecture, et cetera.
-
 
 Present or demonstrate an artwork, give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a non negative duration and not being too long.
 

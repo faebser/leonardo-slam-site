@@ -2,7 +2,7 @@ const BEGINNING = "-B-";
 const END = "-E-";
 
 const buzzing = (words) => {
-	return getWord(words, BEGINNING, randomInt(10, 15), [])
+	return getWord(words, BEGINNING, randomInt(15, 75), [])
 			.reverse()
 			.reduce((acc, el) => {
 				if(el === "-E-") return acc;
