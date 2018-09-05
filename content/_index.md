@@ -46,7 +46,7 @@ description = ""
 
 Present or demonstrate an artwork, give a serious presentation, give a parody presentation, read a manifesto, tell an anecdote, involve the audience, improvise a song. There is no limit on the form of the presentation other than having a non negative duration and not being too long.
 
-<a href="/leonardo-slam/archive/">Leonardo Archive Material</a>: Assorted materials from the Leonardo Archive are here for reference and inspiration.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
+For reference/inspiration/amusement, please visit the <a href="/leonardo-slam/generator">Leonardo Generator</a>, a tool providing random article abstracts generated from 50 years of Leonardo, and <a href="/leonardo-slam/archive/">Leonardo Archive Material</a>: Assorted materials and curiosities from the Leonardo Archive.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
 
 Presentations may be given in any language.
 
