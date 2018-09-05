@@ -1,0 +1,43 @@
+h1 {
+	letter-spacing: 3px;
+	font-weight: normal;
+	padding-left: 1.5rem;
+	margin: 0.67em 0;
+}
+
+h2 {
+	letter-spacing: 3px;
+	font-weight: normal;
+	padding-left: 1.5rem;
+	margin: 0.67em 0;
+	font-weight: normal;
+	font-size: 1.3rem;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 90vh;
+}
+
+#app #buzzword,
+#app #controls button {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0.1rem;
+	word-spacing: 0.15rem;
+}
+
+#app #controls {
+	margin: auto 0 0 0;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#app #controls button {
+	margin: 1rem 0 0 auto;
+	border: 1px solid hsl(0, 0, 64);
+	cursor: pointer;
+	background-color: white;
+	padding: 0.5rem 0.95rem;
+}
