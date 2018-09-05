@@ -51,10 +51,12 @@ def worker(_q, _tq, _i):
         # waiting
         html = sleepy_request(item)
         print("getting abstracts")
-        abstract_links = [_link["href"] for _link in html.select("a.journal-abstract-link")]
-        abstract_texts = map(map_link_to_abstracts, abstract_links)
-        for text in abstract_texts:
-            _tq.put(text)
+        # abstract_links = [_link["href"] for _link in html.select("a.journal-abstract-link")]
+        # abstract_texts = map(map_link_to_abstracts, abstract_links)
+        titles = [_link for _link in html.select("div.journal-article-title p")]
+        print(titles)
+        for text in titles:
+            _tq.put(text.string)
         _q.task_done()
     print("stopping " + str(_i))
 
@@ -87,7 +89,7 @@ for t in threads:
 # turn tq into list
 result = list(targetQueue.queue)
 print(len(result))
-with open('raw.json', 'w') as raw_file:
+with open('raw_titles.json', 'w') as raw_file:
     json.dump(result, raw_file)
 
 

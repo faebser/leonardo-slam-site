@@ -44,7 +44,7 @@ def filter_empty(_item):
     return _item is not None
 
 
-with open('raw.json') as in_file:
+with open('raw_titles.json') as in_file:
     unprocessed = json.load(in_file)
     unprocessed = filter(filter_empty, unprocessed)
 
@@ -82,5 +82,5 @@ for token in unprocessed:
 
 
 # write data object
-with open('data.json', 'w') as out_file:
+with open('data-titles.json', 'w') as out_file:
     json.dump(data, out_file)
