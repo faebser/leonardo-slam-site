@@ -8,6 +8,7 @@ description = ""
 
 <img src="LeonardoSlam_Web_.png">
 
+
 # To reserve a slot to present/slam, please register:
 <form action="https://formspree.io/the.leonardo.slam+signup@gmail.com"
       method="POST">
@@ -23,8 +24,7 @@ description = ""
           <li>
                <label for="date">Date</label>
     <select name="date">
-          <option selected>Friday, 07.09.</option>
-          <option>Sunday, 09.09.</option>
+          <option selected>Sunday, 09.09.</option>
           <option>Monday, 10.09.</option>
         </select>
           </li>
@@ -47,6 +47,10 @@ Present or demonstrate an artwork, give a serious presentation, give a parody pr
 <a href="/leonardo-slam/archive/">Leonardo Archive Material</a>: Assorted materials from the Leonardo Archive are here for reference and inspiration.  Presentations need not be directly related to this material, but feel free to seed your clouds with it.  Readings based on this material may receive special consideration.
 
 Presentations may be given in any language.
+
+You may submit video & audio material ahead of time.
+
+You may participate in absentia by providing video/audio or other media for slamming.
 
 Sign up is encouraged in order to reserve a spot for presentations. If you register, you are guaranteed a slot.  If you do not register, then you still may be able to present depending on space & time, but without guarantee.
 
